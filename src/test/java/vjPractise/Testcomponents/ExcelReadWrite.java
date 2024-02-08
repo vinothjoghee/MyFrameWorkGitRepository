@@ -1,5 +1,5 @@
 package vjPractise.Testcomponents;
 
-public class ExcelReader {
+public class ExcelReadWrite {
 
 }
