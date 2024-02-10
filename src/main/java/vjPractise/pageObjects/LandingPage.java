@@ -26,6 +26,9 @@ public class LandingPage extends AbstractComponent {
 	@FindBy(css="[class*='flyInOut']")
 	WebElement errorMessage;
 	
+	@FindBy(css=".btn1")
+	WebElement Registr;
+	
 	public LandingPage(WebDriver driver) {
 		super(driver);
 		//initialization
@@ -57,6 +60,14 @@ public class LandingPage extends AbstractComponent {
 	
 	public String checkPwdErrorValidation() {
 		return pwdVal.getText();
+	}
+	
+	public Register RegisterUser() {
+		waitForWebElementToAppear(Registr);
+		Registr.click();
+		Register reg=new Register(driver);
+		return reg;
+		
 	}
 
 }
